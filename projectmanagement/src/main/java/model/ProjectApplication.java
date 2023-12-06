@@ -3,6 +3,7 @@ import java.util.*;
 
 public class ProjectApplication {
 
+    private static ProjectApplication projectApp;
     private User currentUser;
     private Project currentProject;
     private UserList userList;
@@ -14,9 +15,15 @@ public class ProjectApplication {
     /**
      *  Project Application constructor
      */
-    public ProjectApplication() {
+    private ProjectApplication() {
         userList = UserList.getInstance();
         projectList = ProjectList.getInstance();
+    }
+
+    public static ProjectApplication getInstance() {
+        if (projectApp == null)
+            projectApp = new ProjectApplication();
+        return projectApp;
     }
 /**
  * Constructs a Project Application setting up the application with a specific project and user.
