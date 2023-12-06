@@ -11,11 +11,13 @@
          <VBox.margin>
             <Insets bottom="200.0" left="200.0" right="200.0" top="200.0" />
          </VBox.margin></Button>
-      <TextField fx:id="txtsignup">
+      <TextField fx:id="fName">
          <VBox.margin>
             <Insets top="-100.0" />
          </VBox.margin>
       </TextField>
-      <TextField />
+      <TextField fx:id="lName" />
+      <TextField fx:id="username" />
+      <TextField fx:id="password" />
    </children>
 </VBox>

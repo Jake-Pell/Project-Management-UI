@@ -205,6 +205,10 @@ public class ProjectApplication {
         return newUser;
     }
 
+    // Saving users
+    public void saveUsers(){
+        userList.saveUsers();
+    }
     // ---End of User---
 
     // Start Task 
