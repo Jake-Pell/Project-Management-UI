@@ -11,13 +11,13 @@
          <VBox.margin>
             <Insets bottom="200.0" left="200.0" right="200.0" top="200.0" />
          </VBox.margin></Button>
-      <TextField fx:id="fName">
+      <TextField fx:id="fName" prefHeight="25.0" prefWidth="685.0" promptText="First Name">
          <VBox.margin>
             <Insets top="-100.0" />
          </VBox.margin>
       </TextField>
-      <TextField fx:id="lName" />
-      <TextField fx:id="username" />
-      <TextField fx:id="password" />
+      <TextField fx:id="lName" promptText="Last Name " />
+      <TextField fx:id="username" promptText="Username" />
+      <TextField fx:id="password" promptText="Password" />
    </children>
 </VBox>

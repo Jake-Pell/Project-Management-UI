@@ -37,11 +37,11 @@ public class SignupController {
         boolean ifWorked = pa.signUp(firstName, lastName, usr, pass);
         System.out.println("In signup Button " + ifWorked);
         pa.saveAll();
-        // if (ifWorked) {
-        //     App.setRoot("project");
-        // } else {
-        //     App.setRoot("signup");
-        // }
+        if (ifWorked) {
+            App.setRoot("project");
+        } else {
+            App.setRoot("signup");
+        }
     }
 
     @FXML

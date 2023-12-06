@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import model.ProjectApplication;
 
 import java.io.IOException;
 
@@ -33,6 +34,10 @@ public class App extends Application {
 
     public static void main(String[] args) {
         launch();
+        // ProjectApplication pa = ProjectApplication.getInstance();
+        // pa.signUp("arshia", "eslami", "aeslamii", "arshia@83");
+        // System.out.println("adding is finished");
+        // pa.saveUsers();
     }
 
 }
