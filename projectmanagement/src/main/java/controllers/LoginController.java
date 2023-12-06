@@ -23,4 +23,9 @@ public class LoginController {
         if (pa.login(uname, pword))
             App.setRoot("projectList");
     }
+
+    @FXML
+    private void switchToSignup() throws IOException {
+        App.setRoot("signup");
+    }
 }

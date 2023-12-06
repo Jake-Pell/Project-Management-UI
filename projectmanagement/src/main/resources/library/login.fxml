@@ -13,6 +13,7 @@
       <TextField fx:id="password" />
       <Label styleClass="stylee" />
       <Button fx:id="primaryButton" alignment="CENTER_RIGHT" onAction="#switchToProjectList" text="Login" />
+      <Button fx:id="noAccount" mnemonicParsing="false" onAction="#switchToSignup" text="No Account? Go to Sign Up" />
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
