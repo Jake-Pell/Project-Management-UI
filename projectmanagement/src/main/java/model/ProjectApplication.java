@@ -199,6 +199,12 @@ public class ProjectApplication {
         return currentUser;
     }
 
+    public String getCurrentUserFirstName() {
+        if (currentUser != null)
+            return currentUser.getFirstName();
+        return "User";
+    }
+
     /**
      * Add a user to a project 
      * @param username The username of the user we want to add
