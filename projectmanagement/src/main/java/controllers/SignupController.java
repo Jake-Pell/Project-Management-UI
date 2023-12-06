@@ -22,10 +22,6 @@ public class SignupController {
     @FXML
     private TextField username;
 
-    @FXML
-    private void switchToPrimary() throws IOException {
-        App.setRoot("login");
-    }
 
     @FXML
     private void signupButton(ActionEvent event ) throws IOException{
@@ -45,7 +41,8 @@ public class SignupController {
     }
 
     @FXML
-    private void onClick() throws IOException{
-
+    private void loginSwitch() throws IOException{
+        App.setRoot("login");
     }
+
 }
