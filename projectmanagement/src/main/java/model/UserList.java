@@ -18,15 +18,16 @@ public class UserList {
 	}
 
 	// all parameters must not be empty or null
+	// first and last name should not contain space, numbers or special char
 	// username must not be taken, and must be at least 4 characters
 	// password must have at least 8 characters, a number, and a special character
 	public boolean addUser(String firstName, String lastName,
 			String username, String password) {
 
 
-		System.out.println(badName(firstName));
 
 		if(badName(firstName)|| badName(lastName) || badUsername(username) || badPassword(password)){
+			System.out.println("bad stuff ");
 			return false;
 		}
 

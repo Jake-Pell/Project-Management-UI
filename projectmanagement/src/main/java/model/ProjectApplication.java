@@ -39,6 +39,11 @@ public class ProjectApplication {
 
     }
 
+    public void saveAll() {
+        saveProjects();
+        saveUsers();
+    }
+
     /**
      * Login the user using its username and password 
      * @param userName The username of the user 
