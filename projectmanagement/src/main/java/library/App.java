@@ -34,10 +34,13 @@ public class App extends Application {
 
     public static void main(String[] args) {
         launch();
-        // ProjectApplication pa = ProjectApplication.getInstance();
-        // pa.signUp("arshia", "eslami", "aeslamii", "arshia@83");
-        // System.out.println("adding is finished");
-        // pa.saveUsers();
+        ProjectApplication pa = ProjectApplication.getInstance();
+       /* pa.login("pellj", "Password123#");
+        pa.setCurrentProject("CSCE247");
+        pa.setCurrentColumn("In Progress");
+        pa.addTask("New Task", "This is my new task", 3);
+        System.out.println("adding is finished");
+        pa.saveProjects(); */
     }
 
 }

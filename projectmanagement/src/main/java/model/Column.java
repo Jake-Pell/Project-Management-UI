@@ -118,6 +118,15 @@ public class Column {
         return null;
     }
 
+    // returns name of all tasks
+    public ArrayList<String> getTaskNames() {
+        ArrayList<String> ret = new ArrayList<String>();
+        for (Task t : tasks) 
+            ret.add(t.getName());
+        return ret;
+        
+    }
+
     /**
      * Checks if the column contains a specific task.
      *

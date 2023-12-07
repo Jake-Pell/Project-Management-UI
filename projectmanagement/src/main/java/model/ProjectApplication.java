@@ -263,6 +263,11 @@ public class ProjectApplication {
         return false;
     }
 
+    // returns names of all tasks for current column
+    public ArrayList<String> getTaskNames() {
+        return currentColumn.getTaskNames();
+    }
+
     /**
      * Move the task between columns 
      * @param endIndex The ending location of the task
