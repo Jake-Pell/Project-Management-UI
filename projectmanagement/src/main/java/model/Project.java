@@ -189,6 +189,14 @@ public boolean addColumn(String columnName) {
   public ArrayList<Column> getColumns() {
     return columns;
   }
+
+  // returns array list with the names of each column
+  public ArrayList<String> getColumnNames() {
+    ArrayList<String> ret = new ArrayList<>();
+    for (Column c : columns)
+     ret.add(c.getName());
+    return ret;
+  }
 /**
  * Retrieves the list of comments associated with the project.
  *

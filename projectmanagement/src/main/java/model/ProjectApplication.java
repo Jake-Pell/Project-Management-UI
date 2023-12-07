@@ -75,6 +75,11 @@ public class ProjectApplication {
         return userList.addUser(firstName, lastName, userName, password);
     }
 
+    // returns name of current project
+    public String getCurrentProjectName() {
+        return currentProject.getName();
+    }
+
     /**
      * Adding a project  
      * @param projectName The name of the new project
@@ -191,6 +196,11 @@ public class ProjectApplication {
         return currentColumn != null;
     }
 
+    // get list of columns for current project
+    public ArrayList<String> getProjectColumns() {
+        return currentProject.getColumnNames();
+    }
+
     /**
      * Get the current user
      * @return current user
@@ -199,6 +209,7 @@ public class ProjectApplication {
         return currentUser;
     }
 
+    // get first name for current user
     public String getCurrentUserFirstName() {
         if (currentUser != null)
             return currentUser.getFirstName();
