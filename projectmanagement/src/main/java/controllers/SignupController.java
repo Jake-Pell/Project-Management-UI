@@ -43,10 +43,14 @@ public class SignupController {
         System.out.println("In signup Button " + ifWorked);
         pa.saveAll();
         if (ifWorked) {
-            App.setRoot("project");
+            App.setRoot("accountCreated");
         } else {
             App.setRoot("signup");
         }
+    }
+
+    private void switchToLogin() throws IOException {
+        App.setRoot("login");
     }
 
 }
