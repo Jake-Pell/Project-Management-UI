@@ -10,11 +10,11 @@
 <VBox alignment="CENTER" prefHeight="480.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProjectListController">
    <children>
       <Label fx:id="welcome" text="Welcome" translateY="20.0" />
-      <Button alignment="CENTER_RIGHT" text="+ Create Project" translateX="-280.0" translateY="-50.0">
+      <Button alignment="CENTER_RIGHT" onAction="#addButton" text="+ Create Project" translateX="-280.0" translateY="-50.0">
          <VBox.margin>
             <Insets top="10.0" />
          </VBox.margin></Button>
-      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="760.0" />
+      <HBox fx:id="mainHBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="310.0" prefWidth="760.0" />
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
