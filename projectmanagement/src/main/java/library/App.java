@@ -34,7 +34,7 @@ public class App extends Application {
 
     public static void main(String[] args) {
         launch();
-        ProjectApplication pa = ProjectApplication.getInstance();
+        //ProjectApplication pa = ProjectApplication.getInstance();
        /* pa.login("pellj", "Password123#");
         pa.setCurrentProject("CSCE247");
         pa.setCurrentColumn("In Progress");

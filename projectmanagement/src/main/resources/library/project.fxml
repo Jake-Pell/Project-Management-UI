@@ -5,7 +5,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Text?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProjectController">
    <children>
@@ -20,10 +19,11 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </HBox.margin>
             </Button>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Project Page !" textOrigin="BOTTOM">
+            <Button fx:id="newTask" mnemonicParsing="false" onAction="#goToNewTask" text="+ New Task">
                <HBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
-               </HBox.margin></Text>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
             <Label fx:id="projectName" text="Project Name">
                <HBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />

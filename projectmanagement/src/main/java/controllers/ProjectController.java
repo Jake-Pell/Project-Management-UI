@@ -35,6 +35,9 @@ public class ProjectController implements javafx.fxml.Initializable {
     private Button saveButton;
 
     @FXML
+    private Button newTask;
+
+    @FXML
     private void getProjectList() throws IOException {
         App.setRoot("projectList");
     }
@@ -87,6 +90,11 @@ public class ProjectController implements javafx.fxml.Initializable {
     private void saveProject(ActionEvent event) {
         ProjectApplication pa = ProjectApplication.getInstance();
         pa.saveProjects();
+    }
+
+    @FXML
+    void goToNewTask(ActionEvent event) throws IOException{
+        App.setRoot("newTask");
     }
     
 }
