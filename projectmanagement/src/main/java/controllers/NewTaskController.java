@@ -1,11 +1,14 @@
 package controllers;
 
+import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import library.App;
 
 public class NewTaskController {
 
@@ -13,7 +16,7 @@ public class NewTaskController {
     private Button createTaskButton;
 
     @FXML
-    private TextArea disrpitoms;
+    private TextArea description;
 
     @FXML
     private Button exit;
@@ -22,8 +25,11 @@ public class NewTaskController {
     private TextField taskName;
 
     @FXML
-    void projectList(ActionEvent event) {
+    private ComboBox priorityBox;
 
+    @FXML
+    private void backToProjectList(ActionEvent event) throws IOException {
+        App.setRoot("project");
     }
 
     @FXML
