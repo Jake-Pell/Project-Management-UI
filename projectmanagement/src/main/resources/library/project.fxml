@@ -26,6 +26,6 @@
             </Label>
          </children>
       </HBox>
-      <HBox fx:id="projectBox" alignment="TOP_CENTER" prefHeight="375.0" prefWidth="800.0" spacing="20.0" stylesheets="@styles.css" />
+      <HBox fx:id="projectBox" alignment="TOP_CENTER" prefHeight="375.0" prefWidth="800.0" spacing="15.0" stylesheets="@styles.css" />
    </children>
 </VBox>

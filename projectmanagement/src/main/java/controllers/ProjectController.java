@@ -9,6 +9,7 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Separator;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.geometry.Insets;
@@ -54,9 +55,10 @@ public class ProjectController implements javafx.fxml.Initializable {
 
 
         // add contents of the column
-        Label columnLabel = new Label(columnName);
-        columnLabel.setPadding(new Insets(0,20,0,20));
-        columnBox.getChildren().add(columnLabel);
+        TextField columnText = new TextField(columnName);
+        //columnText.setPadding(new Insets(0,25,0,25));
+        columnText.setAlignment(Pos.CENTER);
+        columnBox.getChildren().add(columnText);
 
         // add column to project box
         projectBox.getChildren().add(columnBox);
