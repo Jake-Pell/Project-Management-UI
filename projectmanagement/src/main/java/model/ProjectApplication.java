@@ -196,6 +196,11 @@ public class ProjectApplication {
         return currentColumn != null;
     }
 
+    // get list of columns for current project
+    public ArrayList<String> getProjectColumns() {
+        return currentProject.getColumnNames();
+    }
+
     /**
      * Get the current user
      * @return current user
