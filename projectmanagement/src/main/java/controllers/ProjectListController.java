@@ -21,8 +21,16 @@ public class ProjectListController implements javafx.fxml.Initializable {
     @FXML
     private Label welcome;
 
+     @FXML
+    private Button createProject;
+
     @FXML
     private HBox mainHBox;
+
+    @FXML
+    void goToNewProject(ActionEvent event) throws IOException {
+        App.setRoot("newProject");
+    }
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
