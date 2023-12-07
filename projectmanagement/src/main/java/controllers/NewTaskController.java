@@ -1,14 +1,34 @@
 package controllers;
-import java.io.IOException;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import library.App;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+
 public class NewTaskController {
-    
-
-
 
     @FXML
-    private void switchToSecondary() throws IOException {
-        App.setRoot("newTask");
+    private Button createTaskButton;
+
+    @FXML
+    private TextArea disrpitoms;
+
+    @FXML
+    private Button exit;
+
+    @FXML
+    private TextField taskName;
+
+    @FXML
+    void projectList(ActionEvent event) {
+
     }
+
+    @FXML
+    void taskList(MouseEvent event) {
+
+    }
+
 }
