@@ -3,6 +3,7 @@ import java.util.*;
 
 public class ProjectApplication {
 
+    private static ProjectApplication projectApp;
     private User currentUser;
     private Project currentProject;
     private UserList userList;
@@ -14,9 +15,15 @@ public class ProjectApplication {
     /**
      *  Project Application constructor
      */
-    public ProjectApplication() {
+    private ProjectApplication() {
         userList = UserList.getInstance();
         projectList = ProjectList.getInstance();
+    }
+
+    public static ProjectApplication getInstance() {
+        if (projectApp == null)
+            projectApp = new ProjectApplication();
+        return projectApp;
     }
 /**
  * Constructs a Project Application setting up the application with a specific project and user.
@@ -30,6 +37,11 @@ public class ProjectApplication {
         userList = UserList.getInstance();
         projectList = ProjectList.getInstance();
 
+    }
+
+    public void saveAll() {
+        saveProjects();
+        saveUsers();
     }
 
     /**
@@ -187,6 +199,12 @@ public class ProjectApplication {
         return currentUser;
     }
 
+    public String getCurrentUserFirstName() {
+        if (currentUser != null)
+            return currentUser.getFirstName();
+        return "User";
+    }
+
     /**
      * Add a user to a project 
      * @param username The username of the user we want to add
@@ -198,6 +216,10 @@ public class ProjectApplication {
         return newUser;
     }
 
+    // Saving users
+    public void saveUsers(){
+        userList.saveUsers();
+    }
     // ---End of User---
 
     // Start Task 

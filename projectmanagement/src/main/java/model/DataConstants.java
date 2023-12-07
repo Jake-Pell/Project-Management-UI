@@ -4,7 +4,7 @@ package model;
 public abstract class DataConstants {
   protected final static String ID = "id";
   // User
-	protected final static String USER_FILE_NAME = "src/main/java/data/users.json";
+	protected final static String USER_FILE_NAME = "projectmanagement/src/main/java/data/users.json";
 	protected final static String USER_FIRST_NAME = "firstName";
 	protected final static String USER_LAST_NAME = "lastName";
 	protected final static String USER_UNAME = "username";
@@ -12,7 +12,7 @@ public abstract class DataConstants {
 	protected final static String USER_PROJECTS = "projects";
 
   // Project
-  protected final static String PROJECT_FILE_NAME = "src/main/java/data/projects.json";
+  protected final static String PROJECT_FILE_NAME = "projectmanagement/src/main/java/data/projects.json";
   protected final static String PROJECT_NAME = "project_name";
   protected final static String PROJECT_USERS = "users";
   protected final static String PROJECT_COLUMNS = "columns";
