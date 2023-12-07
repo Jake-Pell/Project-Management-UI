@@ -64,9 +64,14 @@ public class ProjectController implements javafx.fxml.Initializable {
         columnText.textProperty().addListener((observable, oldValue, newValue) -> {
             pa.editColumnName(newValue);
         });
-        //columnText.setPadding(new Insets(0,25,0,25));
         columnText.setAlignment(Pos.CENTER);
         columnBox.getChildren().add(columnText);
+
+        ArrayList<String> taskList =  pa.getTaskNames();
+        for (String name : taskList) {
+            Button task = new Button(name);
+            columnBox.getChildren().add(task);
+        }
 
         // add column to project box
         projectBox.getChildren().add(columnBox);
