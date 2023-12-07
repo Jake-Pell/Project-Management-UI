@@ -25,7 +25,7 @@ public class ProjectListController implements javafx.fxml.Initializable {
     private Button createProject;
 
     @FXML
-    private HBox mainHBox;
+    private VBox mainVBox;
 
     @FXML
     void goToNewProject(ActionEvent event) throws IOException {
@@ -37,26 +37,27 @@ public class ProjectListController implements javafx.fxml.Initializable {
         ProjectApplication pa = ProjectApplication.getInstance();
         welcome.setText("Welcome, " + pa.getCurrentUserFirstName());
         ArrayList<Project> projects = pa.getUserProjects();
-        mainHBox.setAlignment(Pos.CENTER);
-        mainHBox.setSpacing(20);
-        for (int i = 0; i < projects.size(); ++i) {
-            HBox currHbox = new HBox();
-            mainHBox.getChildren().add(currHbox);
+        mainVBox.setAlignment(Pos.CENTER);
+        mainVBox.setSpacing(20);
+        for (int i = 0; i < projects.size();) {
+            HBox currHBox = new HBox();
+            HBox newHBox;
             for (int j = 0; j < 3 && i < projects.size(); ++j) {
 
-                VBox newVBox = createVBox(projects.get(i).getName());
-                currHbox.getChildren().add(newVBox);
+                newHBox = createHBox(projects.get(i).getName());
+                currHBox.getChildren().add(newHBox);
                 ++i;
             }
+            mainVBox.getChildren().add(currHBox);
             // Label pNameLabel = new Label(projects.get(i).getName());
             // newVBox.getChildren().add(pNameLabel);
         }
     }
 
-    private VBox createVBox(String projectName) {
-        VBox vbox = new VBox();
+    private HBox createHBox(String projectName) {
+        HBox hbox = new HBox();
         Button button = new Button(projectName);
-        vbox.getChildren().add(button);
+        hbox.getChildren().add(button);
         button.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
@@ -70,7 +71,8 @@ public class ProjectListController implements javafx.fxml.Initializable {
                 }    
             }
         }); 
-        return vbox;
+        button.setMinSize(100, 50);
+        return hbox;
     }
 
 
