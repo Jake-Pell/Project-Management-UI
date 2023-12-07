@@ -13,3 +13,12 @@
 .stylee {
     -fx-background-color:#FFFFFF;
 }
+
+.label {
+    -fx-text-fill: #3A62D7;
+}
+
+.seperator:vertical {
+    -fx-background-color: red;
+    -fx-scale-x: 10;
+}

@@ -3,7 +3,6 @@
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
@@ -11,6 +10,11 @@
    <children>
       <TextField fx:id="projectName" promptText="Project Name " />
       <Button mnemonicParsing="false" onAction="#CreateProject" text="Create" />
+      <Button fx:id="backButton" mnemonicParsing="false" onAction="#backToProjects" text="Back">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Button>
    </children>
     <stylesheets>
       <URL value="@styles.css" />
