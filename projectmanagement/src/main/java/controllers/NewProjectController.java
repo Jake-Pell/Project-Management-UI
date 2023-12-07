@@ -16,6 +16,7 @@ public class NewProjectController {
        String pName = projectName.getText();
        ProjectApplication pa = ProjectApplication.getInstance();
        pa.addProject(pName);
+       pa.saveAll();
        App.setRoot("projectList");
     }
 }
