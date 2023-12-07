@@ -39,14 +39,13 @@ public class ProjectListController implements javafx.fxml.Initializable {
         ArrayList<Project> projects = pa.getUserProjects();
         mainHBox.setAlignment(Pos.CENTER);
         mainHBox.setSpacing(20);
-        HBox currentHbox = mainHBox;
         for (int i = 0; i < projects.size(); ++i) {
-            VBox currvbox = new VBox();
-            currentHbox.getChildren().add(currvbox);
+            HBox currHbox = new HBox();
+            mainHBox.getChildren().add(currHbox);
             for (int j = 0; j < 3 && i < projects.size(); ++j) {
 
-                HBox newHBox = createHBox(projects.get(i).getName());
-                currvbox.getChildren().add(newHBox);
+                VBox newVBox = createVBox(projects.get(i).getName());
+                currHbox.getChildren().add(newVBox);
                 ++i;
             }
             // Label pNameLabel = new Label(projects.get(i).getName());
@@ -54,10 +53,10 @@ public class ProjectListController implements javafx.fxml.Initializable {
         }
     }
 
-    private HBox createHBox(String projectName) {
-        HBox hbox = new HBox();
+    private VBox createVBox(String projectName) {
+        VBox vbox = new VBox();
         Button button = new Button(projectName);
-        hbox.getChildren().add(button);
+        vbox.getChildren().add(button);
         button.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
@@ -71,16 +70,13 @@ public class ProjectListController implements javafx.fxml.Initializable {
                 }    
             }
         }); 
-        return hbox;
+        return vbox;
     }
 
 
     @FXML
     private void addButton(ActionEvent event) throws IOException {
         App.setRoot("newProject");
-        // VBox newVBox = new VBox();
-        // Label textLabel = new Label("NEW VBOX");
-        // newVBox.getChildren().add(textLabel);
-        // mainHBox.getChildren().add(newVBox);
+        
     }
 }
