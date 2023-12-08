@@ -11,7 +11,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AccountCreatedController">
    <children>
       <Rectangle fill="#bbbbbb" height="480.0" smooth="false" stroke="TRANSPARENT" strokeType="OUTSIDE" width="400.0" />
@@ -37,7 +36,7 @@
       </Text>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="78.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../TeamWorx.png" />
+            <Image url="@TeamWorx.png" />
          </image>
       </ImageView>
    </children>
