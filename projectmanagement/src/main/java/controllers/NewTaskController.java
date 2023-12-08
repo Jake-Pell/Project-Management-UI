@@ -42,7 +42,17 @@ public class NewTaskController implements javafx.fxml.Initializable {
     }
 
     @FXML
-    void taskList(MouseEvent event) {
+    private void createTask(ActionEvent event) throws IOException {
+        ProjectApplication pa = ProjectApplication.getInstance();
+        String name = taskName.getText();
+        String desc = description.getText();
+        int priority =  priorityBox.getValue();
+        String column = columnSelectBox.getValue();
+        pa.setCurrentColumn(column);
+
+        if (pa.createTask(name, desc, priority))
+            App.setRoot("project");
+
 
     }
 
@@ -53,5 +63,6 @@ public class NewTaskController implements javafx.fxml.Initializable {
         columnSelectBox.setItems(FXCollections
                                  .observableArrayList(columnOptions));
     }
+
 
 }

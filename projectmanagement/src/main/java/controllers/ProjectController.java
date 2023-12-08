@@ -60,6 +60,7 @@ public class ProjectController implements javafx.fxml.Initializable {
         // create a vbox for the column
         VBox columnBox = new VBox();
         columnBox.setAlignment(Pos.TOP_CENTER);
+        columnBox.setSpacing(10);
 
 
         // add contents of the column
@@ -74,6 +75,7 @@ public class ProjectController implements javafx.fxml.Initializable {
         ArrayList<String> taskList =  pa.getTaskNames();
         for (String name : taskList) {
             Button task = new Button(name);
+            task.wrapTextProperty().setValue(true);
             columnBox.getChildren().add(task);
         }
 
