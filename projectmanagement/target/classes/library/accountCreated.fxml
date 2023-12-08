@@ -25,17 +25,17 @@
       <Line endX="169.0" endY="276.0" layoutX="423.0" layoutY="7.0" startX="153.0" startY="258.0" stroke="#0da10f" strokeLineCap="ROUND" strokeWidth="5.0" />
       <Line endX="197.0" endY="225.0" layoutX="433.0" layoutY="17.0" startX="159.7071533203125" startY="266.70709228515625" stroke="#0da10f" strokeLineCap="ROUND" strokeWidth="5.0" />
       <Circle fill="#1f93ff00" layoutX="600.0" layoutY="263.0" radius="50.0" smooth="false" stroke="#0da10f" strokeType="INSIDE" strokeWidth="5.0" />
-      <Text fill="#3a62d7" layoutX="86.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TeamWorx">
+      <Text fill="#3a62d7" layoutX="64.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TeamWorx">
          <font>
-            <Font name="Calibri" size="51.0" />
+            <Font name="Calibri" size="40.0" />
          </font>
       </Text>
       <Text fill="#3a62d7" layoutX="32.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Project Management, Made Easy">
          <font>
-            <Font name="Calibri Italic" size="25.0" />
+            <Font name="Calibri Italic" size="18.0" />
          </font>
       </Text>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="125.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="78.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../TeamWorx.png" />
          </image>
