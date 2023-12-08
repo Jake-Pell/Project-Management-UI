@@ -65,6 +65,7 @@ public class ProjectController implements javafx.fxml.Initializable {
         // add contents of the column
         TextField columnText = new TextField(columnName);
         columnText.textProperty().addListener((observable, oldValue, newValue) -> {
+            pa.setCurrentColumn(oldValue);
             pa.editColumnName(newValue);
         });
         columnText.setAlignment(Pos.CENTER);
