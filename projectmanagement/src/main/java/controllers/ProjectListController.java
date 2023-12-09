@@ -28,6 +28,13 @@ public class ProjectListController implements javafx.fxml.Initializable {
     private VBox mainVBox;
 
     @FXML
+    void logOut(ActionEvent event) throws IOException {
+        ProjectApplication pa = ProjectApplication.getInstance();
+        pa.logout();
+        App.setRoot("login");
+    }
+
+    @FXML
     void goToNewProject(ActionEvent event) throws IOException {
         App.setRoot("newProject");
     }

@@ -13,6 +13,11 @@
          <children>
             <Button alignment="CENTER_RIGHT" onAction="#addButton" text="+ Create Project" />
             <Label fx:id="welcome" text="Welcome" />
+            <Button mnemonicParsing="false" onAction="#logOut" prefHeight="40.0" prefWidth="108.0" text="Log out">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
          </children>
          <opaqueInsets>
             <Insets />
