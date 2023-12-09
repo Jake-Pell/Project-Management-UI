@@ -11,7 +11,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
    <children>
       <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="400.0" style="-fx-background-color: BBBBBB;">
@@ -59,14 +58,19 @@
             </TextField>
             <TextField fx:id="password" promptText="Password">
                <VBox.margin>
-                  <Insets top="30.0" />
+                  <Insets top="20.0" />
                </VBox.margin>
             </TextField>
             <Label styleClass="stylee" />
-            <Button fx:id="primaryButton" alignment="CENTER_RIGHT" onAction="#switchToProjectList" style="-fx-background-color: #3a62d7;" text="Login" textFill="WHITE" />
-            <Button fx:id="noAccount" mnemonicParsing="false" onAction="#switchToSignup" style="-fx-background-color: #3a62d7;" text="No Account? Go to Sign Up" textFill="WHITE">
+            <Button fx:id="primaryButton" alignment="CENTER" onAction="#switchToProjectList" prefWidth="171.0" style="-fx-background-color: #3a62d7;" text="Login" textFill="WHITE" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="No Account?">
                <VBox.margin>
-                  <Insets top="20.0" />
+                  <Insets top="70.0" />
+               </VBox.margin>
+            </Text>
+            <Button fx:id="noAccount" mnemonicParsing="false" onAction="#switchToSignup" style="-fx-background-color: #3a62d7;" text="Go to Sign Up" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="10.0" />
                </VBox.margin>
             </Button>
          </children>
