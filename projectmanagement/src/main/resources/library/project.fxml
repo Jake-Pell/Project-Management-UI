@@ -29,6 +29,11 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
                </HBox.margin>
             </Label>
+            <Button mnemonicParsing="false" onAction="#deleteCurrentProject" text="Delete">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="100.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
       <HBox fx:id="projectBox" alignment="TOP_CENTER" prefHeight="375.0" prefWidth="800.0" spacing="5.0" stylesheets="@styles.css" />

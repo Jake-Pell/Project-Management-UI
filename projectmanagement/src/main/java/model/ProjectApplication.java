@@ -201,6 +201,11 @@ public class ProjectApplication {
         return currentProject.getColumnNames();
     }
 
+    // deletes current project
+    public boolean removeCurrentProject(){
+        return ProjectList.getInstance().removeProject(currentProject);
+    }
+
     /**
      * Get the current user
      * @return current user

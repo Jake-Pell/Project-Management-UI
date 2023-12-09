@@ -74,4 +74,9 @@ public class ProjectList {
         return null;
     }
 
+    // removes given project
+    public boolean removeProject(Project p) {
+        return projects.remove(p);
+    }
+
 }

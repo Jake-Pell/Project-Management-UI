@@ -119,5 +119,13 @@ public class ProjectController implements javafx.fxml.Initializable {
          }
         }
     }
+
+    @FXML
+    void deleteCurrentProject() throws IOException {
+        ProjectApplication pa = ProjectApplication.getInstance();
+        pa.removeCurrentProject();
+        pa.saveProjects();
+        App.setRoot("projectList");
+    }
     
 }
