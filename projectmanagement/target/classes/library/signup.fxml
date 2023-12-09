@@ -9,36 +9,35 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" style="-fx-background-color: AAAAAA;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle fill="#bbbbbb" height="480.0" smooth="false" stroke="TRANSPARENT" strokeType="OUTSIDE" width="400.0" />
       <Rectangle fill="WHITE" height="480.0" layoutX="401.0" smooth="false" stroke="TRANSPARENT" strokeType="OUTSIDE" width="400.0" />
-      <Button mnemonicParsing="false" onAction="#signupButton" prefHeight="33.0" prefWidth="101.0" style="-fx-background-color: #3a62d7;" styleClass="blueButton" text="Create Account" textFill="WHITE" />
-      <TextField fx:id="fName" promptText="First Name" />
-      <TextField fx:id="lName" promptText="Last Name " />
-      <TextField fx:id="username" promptText="Username" />
-      <TextField fx:id="password" promptText="Password" />
+      <Button layoutX="414.0" layoutY="328.0" mnemonicParsing="false" onAction="#signupButton" prefHeight="33.0" prefWidth="101.0" style="-fx-background-color: #3a62d7;" styleClass="blueButton" text="Create Account" textFill="WHITE" />
+      <TextField fx:id="fName" layoutX="414.0" layoutY="154.0" promptText="First Name" />
+      <TextField fx:id="lName" layoutX="414.0" layoutY="198.0" promptText="Last Name " />
+      <TextField fx:id="username" layoutX="414.0" layoutY="242.0" promptText="Username" />
+      <TextField fx:id="password" layoutX="414.0" layoutY="280.0" promptText="Password" />
       <Text fx:id="LoginSwitch" onMouseClicked="#Login" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?" />
-      <Button mnemonicParsing="false" style="-fx-background-color: #3a62d7;" styleClass="blueButton" text="Go To Login" textFill="WHITE" />
+      <Button layoutX="433.0" layoutY="421.0" mnemonicParsing="false" style="-fx-background-color: #3a62d7;" styleClass="blueButton" text="Go To Login" textFill="WHITE" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Create Teamworx Account">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <Text fill="#3a62d7" strokeType="OUTSIDE" strokeWidth="0.0" text="TeamWorx">
+      <Text fill="#3a62d7" layoutX="86.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TeamWorx">
          <font>
             <Font name="Calibri" size="51.0" />
          </font>
       </Text>
-      <Text fill="#3a62d7" strokeType="OUTSIDE" strokeWidth="0.0" text="Project Management, Made Easy">
+      <Text fill="#3a62d7" layoutX="32.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Project Management, Made Easy">
          <font>
             <Font name="Calibri Italic" size="25.0" />
          </font>
       </Text>
-      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="125.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../TeamWorx.png" />
+            <Image url="@TeamWorx.png" />
          </image>
       </ImageView>
    </children>
