@@ -37,15 +37,14 @@ public class ProjectListController implements javafx.fxml.Initializable {
         ProjectApplication pa = ProjectApplication.getInstance();
         welcome.setText("Welcome, " + pa.getCurrentUserFirstName());
         ArrayList<Project> projects = pa.getUserProjects();
-        mainVBox.setAlignment(Pos.CENTER);
-        mainVBox.setSpacing(20);
         for (int i = 0; i < projects.size();) {
             HBox currHBox = new HBox();
-            HBox newHBox;
+            currHBox.setSpacing(40);
+            currHBox.setAlignment(Pos.CENTER_LEFT);
             for (int j = 0; j < 3 && i < projects.size(); ++j) {
 
-                newHBox = createHBox(projects.get(i).getName());
-                currHBox.getChildren().add(newHBox);
+                Button projectButton = createProjectButton(projects.get(i).getName());
+                currHBox.getChildren().add(projectButton);
                 ++i;
             }
             mainVBox.getChildren().add(currHBox);
@@ -54,10 +53,9 @@ public class ProjectListController implements javafx.fxml.Initializable {
         }
     }
 
-    private HBox createHBox(String projectName) {
-        HBox hbox = new HBox();
+    private Button createProjectButton(String projectName) {
+
         Button button = new Button(projectName);
-        hbox.getChildren().add(button);
         button.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
@@ -71,8 +69,8 @@ public class ProjectListController implements javafx.fxml.Initializable {
                 }    
             }
         }); 
-        button.setMinSize(100, 50);
-        return hbox;
+        button.setMinSize(150, 50);
+        return button;
     }
 
 
