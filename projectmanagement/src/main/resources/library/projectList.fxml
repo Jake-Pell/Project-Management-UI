@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="480.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProjectListController">
+<VBox alignment="TOP_CENTER" prefHeight="480.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProjectListController">
    <children>
-      <HBox alignment="CENTER_LEFT" prefHeight="157.0" prefWidth="800.0" spacing="80.0">
+      <HBox alignment="TOP_CENTER" prefHeight="157.0" prefWidth="800.0" spacing="80.0">
          <children>
             <Button alignment="CENTER_RIGHT" onAction="#addButton" text="+ Create Project" />
             <Label fx:id="welcome" text="Welcome" />
@@ -25,6 +25,9 @@
          <padding>
             <Insets left="20.0" />
          </padding>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
       </HBox>
       <VBox fx:id="mainVBox" alignment="TOP_CENTER" prefHeight="415.0" prefWidth="800.0" spacing="40.0">
          <opaqueInsets>
