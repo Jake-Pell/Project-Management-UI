@@ -15,7 +15,7 @@
             <Label fx:id="welcome" text="Welcome" />
             <Button mnemonicParsing="false" onAction="#logOut" prefHeight="40.0" prefWidth="108.0" text="Log out">
                <HBox.margin>
-                  <Insets />
+                  <Insets left="230.0" />
                </HBox.margin>
             </Button>
          </children>
