@@ -273,8 +273,8 @@ public class ProjectApplication {
      * @param endIndex The ending location of the task
      * @return True if we succesfuly changed the location
      */
-    public boolean moveTask(int endIndex) {
-        return currentProject.moveTask(currentTask, endIndex);
+    public boolean moveTask(String newColumn) {
+        return currentProject.moveTask(currentTask, newColumn);
     }
 
     /**
@@ -283,9 +283,15 @@ public class ProjectApplication {
      * @return True if we successfuly changed the task
      */
     public boolean setCurrentTask(String name) {
-        if (currentColumn == null) 
-            return false;
-        currentTask = currentColumn.getTask(name);
+        ArrayList<Column> columns = currentProject.getColumns();
+        for (Column c : columns) {
+            currentTask = c.getTask(name);
+            if (currentTask != null)
+                break;
+        }
+        System.out.println();
+        System.out.println(currentTask);
+
         return currentTask != null;
     }
 
@@ -313,6 +319,22 @@ public class ProjectApplication {
         return false;
     }
     // ---End of Task---
+
+    public String getCurrentTaskName() {
+        return currentTask.getName();
+    }
+
+    public String getCurrentTaskDescription() {
+        return currentTask.getDescription();
+    }
+
+    public int getCurrentTaskPriority() {
+        return currentTask.getPriority();
+    }
+
+    public String getCurrentColumnName() {
+        return currentColumn.getName();
+    }
 
     // Reply methods
     public boolean setCurrentComment(String author, String description) {

@@ -229,17 +229,20 @@ public boolean addColumn(String columnName) {
  * @param endIndex he index representing the new position in the list of columns.
  * @return {@code flase} if the task cannot be moved, typically due to an invalid endIndex.
  */
-  public boolean moveTask(Task task, int endIndex) {
+  public boolean moveTask(Task task, String newColumn) {
 
     // int start = columns.indexOf(currCol);
     Column colOfTask = null;
+    Column endColumn = null;
     for (Column column : columns) {
       if (column.hasTask(task)) {
         colOfTask = column;
-        break;
       }
+      if (column.getName().equals(newColumn))
+        endColumn = column;
     }
     int start = columns.indexOf(colOfTask);
+    int endIndex = columns.indexOf(endColumn);
     if (endIndex < 0 || endIndex > columns.size()) {
       return false;
     }

@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -76,6 +77,13 @@ public class ProjectController implements javafx.fxml.Initializable {
         for (String name : taskList) {
             Button task = new Button(name);
             task.wrapTextProperty().setValue(true);
+            EventHandler<ActionEvent> editTaskEvent = new EventHandler<ActionEvent>() { 
+                public void handle(ActionEvent e)
+                { 
+                    editTask(e);
+                } 
+            }; 
+            task.setOnAction(editTaskEvent);
             columnBox.getChildren().add(task);
         }
 
@@ -98,6 +106,18 @@ public class ProjectController implements javafx.fxml.Initializable {
     @FXML
     void goToNewTask(ActionEvent event) throws IOException{
         App.setRoot("newTask");
+    }
+
+    @FXML
+    void editTask(ActionEvent event) {
+        ProjectApplication pa = ProjectApplication.getInstance();
+        if (pa.setCurrentTask(((Button) event.getSource()).getText())) {
+            try {
+            App.setRoot("editTask");
+        } catch (IOException e) {
+            e.printStackTrace();
+         }
+        }
     }
     
 }
