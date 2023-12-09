@@ -286,12 +286,11 @@ public class ProjectApplication {
         ArrayList<Column> columns = currentProject.getColumns();
         for (Column c : columns) {
             currentTask = c.getTask(name);
-            if (currentTask != null)
+            if (currentTask != null) {
+                currentColumn = c;
                 break;
+          }
         }
-        System.out.println();
-        System.out.println(currentTask);
-
         return currentTask != null;
     }
 
